@@ -18,7 +18,7 @@ public class Client implements Serializable {
     @OneToMany(mappedBy = "client")
     private Collection<Compte> comptes;
 
-    public Client(String nom, String email, Collection<Compte> comptes) {
+    public Client(String nom, String email) {
         this.nom = nom;
         this.email = email;
         this.comptes = comptes;

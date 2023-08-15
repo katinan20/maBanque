@@ -8,7 +8,7 @@ import java.util.Date;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "TYPE_COMPTE", discriminatorType = DiscriminatorType.STRING, length = 6)
+@DiscriminatorColumn(name = "type_cpt", discriminatorType = DiscriminatorType.STRING, length = 2)
 public abstract class Compte implements Serializable {
    @Id
     private String numCompte;
@@ -19,12 +19,12 @@ public abstract class Compte implements Serializable {
     @OneToMany(mappedBy = "compte")
     private Collection<Operation>operations;
 
-    public Compte(String numCompte, Date dateCreation, Double solde, Client client, Collection<Operation> operations) {
+    public Compte(String numCompte, Date dateCreation, Double solde, Client client) {
         this.numCompte = numCompte;
         this.dateCreation = dateCreation;
         this.solde = solde;
         this.client = client;
-        this.operations = operations;
+
     }
 
     public Compte(){}

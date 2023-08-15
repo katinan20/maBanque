@@ -6,7 +6,7 @@ import jakarta.persistence.Entity;
 import java.util.Date;
 
 @Entity
-@DiscriminatorValue("Retrait")
+@DiscriminatorValue("R")
 public class Retrait extends Operation{
 
     public Retrait(Date dateOperation, double montant, Compte compte) {

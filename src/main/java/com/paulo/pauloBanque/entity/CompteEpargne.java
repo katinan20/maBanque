@@ -7,11 +7,12 @@ import java.util.Collection;
 import java.util.Date;
 
 @Entity
-@DiscriminatorValue("CPT_EPGNE")
+@DiscriminatorValue("CE")
 public class CompteEpargne extends Compte{
     private double taux;
-    public CompteEpargne(String numCompte, Date dateCreation, Double solde, Client client, Collection<Operation> operations, double taux) {
-        super(numCompte, dateCreation, solde, client, operations);
+    public CompteEpargne(String numCompte, Date dateCreation, Double solde,
+                         Client client, double taux) {
+        super(numCompte, dateCreation, solde, client);
         this.taux = taux;
     }
 

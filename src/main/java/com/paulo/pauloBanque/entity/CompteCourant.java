@@ -7,13 +7,13 @@ import java.util.Collection;
 import java.util.Date;
 
 @Entity
-@DiscriminatorValue("CPT_CRT")
+@DiscriminatorValue("CC")
 public class CompteCourant extends Compte{
 
     private double decouvert;
 
-    public CompteCourant(String numCompte, Date dateCreation, Double solde, Client client, Collection<Operation> operations, double decouvert) {
-        super(numCompte, dateCreation, solde, client, operations);
+    public CompteCourant(String numCompte, Date dateCreation, Double solde, Client client, double decouvert) {
+        super(numCompte, dateCreation, solde, client);
         this.decouvert = decouvert;
     }
 

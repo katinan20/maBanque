@@ -6,7 +6,7 @@ import jakarta.persistence.Entity;
 import java.util.Date;
 
 @Entity
-@DiscriminatorValue("Versement")
+@DiscriminatorValue("V")
 public class Versement extends Operation{
 
     public Versement(Date dateOperation, double montant, Compte compte) {
