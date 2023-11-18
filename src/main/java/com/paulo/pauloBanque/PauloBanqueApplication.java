@@ -23,12 +23,16 @@ public class PauloBanqueApplication implements CommandLineRunner {
 	private CompteRepository compteRepository;
 	@Autowired
 	private BanqueMettier banqueMettier;
+
+
 	public static void main(String[] args) {
 		SpringApplication.run(PauloBanqueApplication.class, args);
 	}
 
+
 	@Override
 	public void run(String... args) throws Exception {
+
 		Client client1 =  clientRepository.save(new Client("Paulo","paulo@gmail.com"));
 		Client client2 =  clientRepository.save(new Client("Davido","davido@gmail.com"));
 		Client client3 =  clientRepository.save(new Client("Elieo","elieo@gmail.com"));
@@ -44,6 +48,5 @@ public class PauloBanqueApplication implements CommandLineRunner {
 		banqueMettier.verser("codePaulo" , 500000);
 		banqueMettier.verser("codeDavido" , 600000);
 		banqueMettier.verser("codeElieo" , 700000);
-
 	}
 }

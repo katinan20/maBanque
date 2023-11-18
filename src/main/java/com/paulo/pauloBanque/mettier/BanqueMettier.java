@@ -51,6 +51,7 @@ public class BanqueMettier implements BanqueService {
 
     @Override
     public void virement(String codeCompte1, String codeCmpte2, double mantant) {
+        if (codeCompte1.equals(codeCmpte2))throw new RuntimeException("virement sur le même compte imposible");
         retirer(codeCompte1, mantant);
         verser(codeCmpte2, mantant);
     }
