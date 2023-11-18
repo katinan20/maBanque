@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Template</title>
+    <link rel="stylesheet" type="text/css"  href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
+    <script src="/webjars/bootstrap/5.2.3/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+
+<header>
+    <ul class="nav  ">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Acceil</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" th:href="@{/compte}">Consulter mon compte</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Consulter mes operations</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled">Fait un retrait</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled">Fait un virement</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled">Fait un versement</a>
+        </li>
+    </ul>
+</header>
+
+<section layout:fragment="content"></section>
+<section layout:fragment="content2"></section>
+
+<footer>
+    <div class="navbar-fixed-bottom">
+        <small> @L'adresse de votre banque</small>
+    </div>
+</footer>
+
+</body>
+</html>
